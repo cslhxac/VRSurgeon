@@ -1,0 +1,12 @@
+﻿{
+	"collisionObjects" : [
+        "skullTemporalis_collision.obj"
+    ],
+	"dynamicObjects" : [
+        {
+			"file_name": "scalpBagUVW.obj",
+            "textureMap" : 1,
+            "normalMap" : 2
+        }
+    ]
+}

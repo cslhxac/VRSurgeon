@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{EEB8FEDD-C32E-D30B-8282-BD0FE942E01E}") = "VRSurgeon", "Assembly-CSharp.csproj", "{50ED495B-6B37-9FB6-D61D-4206B8F99648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50ED495B-6B37-9FB6-D61D-4206B8F99648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50ED495B-6B37-9FB6-D61D-4206B8F99648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50ED495B-6B37-9FB6-D61D-4206B8F99648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50ED495B-6B37-9FB6-D61D-4206B8F99648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.TabWidth = 2
+		$2.IndentWidth = 2
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 120
+		$4.TabWidth = 2
+		$4.IndentWidth = 2
+		$4.inheritsSet = VisualStudio
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = text/x-shader
+		$0.StandardHeader = $6
+		$6.Text = 
+		$6.IncludeInNewFiles = True
+	EndGlobalSection
+EndGlobal
