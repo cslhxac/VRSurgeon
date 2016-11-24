@@ -6,6 +6,7 @@ public class MeshDeformer : MonoBehaviour {
 	Mesh deformingMesh;
 	Vector3[] originalVertices;
 	Vector3[] displacedVertices;
+  int refinement;
 	// Use this for initialization
 	void Start () {
 		deformingMesh = GetComponent<MeshFilter> ().mesh;
@@ -25,6 +26,6 @@ public class MeshDeformer : MonoBehaviour {
 		deformingMesh.vertices = displacedVertices;
 		deformingMesh.RecalculateNormals();
     //this.transform.GetComponent<MeshCollider>().sharedMesh = deformingMesh;
-    this.transform.Translate (Vector3.forward*(0.1f));
+    //this.transform.Translate (Vector3.forward*(0.1f));
 	}
 }
