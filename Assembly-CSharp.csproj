@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CollisionIndicator.cs" />
+     <Compile Include="Assets\Script\HookManager.cs" />
      <Compile Include="Assets\Script\MeshDeformer.cs" />
      <Compile Include="Assets\Script\Networking.cs" />
      <Compile Include="Assets\Script\RayCaster.cs" />
