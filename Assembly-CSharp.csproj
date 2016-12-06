@@ -53,6 +53,7 @@
      <Compile Include="Assets\Script\SceneLoader.cs" />
      <Compile Include="Assets\Script\SceneObject.cs" />
      <Compile Include="Assets\Script\Scene_Descriptor.cs" />
+     <Compile Include="Assets\Script\SutureManager.cs" />
      <Compile Include="Assets\boxTrigger.cs" />
      <None Include="Assets\Shader\NewInstancedSurfaceShader.shader" />
      <None Include="Assets\StreamingAssets\build_info.txt" />

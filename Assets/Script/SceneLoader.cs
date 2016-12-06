@@ -129,10 +129,15 @@ public class ObjImporter
                                 System.Convert.ToSingle(brokenString[3]));
                             v++;
                             break;
-                        case "vt":
-                            mesh.uvw[vt] = new Vector3(System.Convert.ToSingle(brokenString[1]),
-                                                             System.Convert.ToSingle(brokenString[2]),
-                                                         System.Convert.ToSingle(brokenString[3]));
+                    case "vt":
+                        if (brokenString.Length == 4) {
+                            mesh.uvw [vt] = new Vector3 (System.Convert.ToSingle (brokenString [1]),
+                                System.Convert.ToSingle (brokenString [2]),
+                                System.Convert.ToSingle (brokenString [3]));
+                        } else {
+                            mesh.uvw [vt] = new Vector3 (System.Convert.ToSingle (brokenString [1]),
+                                System.Convert.ToSingle (brokenString [2]),0);
+                        }
                             vt++;
                             break;
                         case "f":
@@ -192,6 +197,7 @@ public class SceneLoader : MonoBehaviour
     ObjImporter importer;
     void Start()
     {
+        Debug.Log (gameObject.name);
         importer = new ObjImporter();
         holderMesh = new Mesh();
         holderMesh = importer.ImportFile(dynamic_model_file);

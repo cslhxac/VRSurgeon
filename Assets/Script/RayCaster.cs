@@ -4,17 +4,34 @@ using System.Collections;
 public class RayCaster : MonoBehaviour {
     private Camera camera;
     public GameObject collision_indicator;
+    public GameObject suture_manager_object;
+    private SutureManager suture_manager;
     private CollisionIndicator indicator;
     private MeshRenderer indicator_render;
     private float hook_offset; 
+    private bool suture_first_point_down;
+    private Vector3 suture_first_point_uv;
+    private int suture_first_point_triangle_id;
 	// Use this for initialization
 	void Start () {
       camera = this.GetComponent<Camera>();
         indicator = collision_indicator.GetComponent<CollisionIndicator> ();
         indicator_render = collision_indicator.GetComponent<MeshRenderer> ();
+        suture_manager = suture_manager_object.GetComponent<SutureManager> ();
 	}
-	
-	// Update is called once per frame
+    void Update (){
+        if (Input.GetKeyDown ("space")) {
+            if (suture_first_point_down) {
+                suture_manager.Create_Suture (suture_first_point_triangle_id,suture_first_point_uv,
+                    indicator.triangleID,indicator.barycentric_coordinate);
+                suture_first_point_down = false;
+            } else {
+                suture_first_point_uv = indicator.barycentric_coordinate;
+                suture_first_point_triangle_id = indicator.triangleID;
+                suture_first_point_down = true;
+            }
+        }
+    }
   void FixedUpdate () {
         RaycastHit hit;
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
